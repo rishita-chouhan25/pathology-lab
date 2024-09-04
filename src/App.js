@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './CommonComponent/Footer/footer';
+import Navbar from './CommonComponent/Navbar/navbar';
+import Status from './Pages/HomeScreen/StatusPage/status';
+import Homescreen from './Pages/HomeScreen/homescreen';
+import {Routes,Route} from 'react-router-dom';
+import Report from './Pages/HomeScreen/Report/report';
+import Prescription from './Pages/Prescription/prescription';
+import axios from 'axios';
 
 function App() {
+
+   
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      
+        <Routes>
+       
+        <Route path='/' element={<Homescreen/>}/>
+       <Route path='/Status' element={<Status/>}/>
+       <Route path='/Report/:id' element={<Report/>}/>
+       <Route path='/prescription/:id' element={<Prescription/>}/>
+        </Routes>
+      
+     
+      
     </div>
   );
 }

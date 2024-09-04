@@ -1,0 +1,20 @@
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(184,229 ,229);
+    padding: 20px 0px;
+}
+.colfooter{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30px;
+    
+
+}
+.footer-anchor{
+    color: black;
+    text-decoration: none;
+}
